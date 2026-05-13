@@ -706,8 +706,8 @@ function App() {
 
   const globalCss = `
     * { box-sizing: border-box; }
-    html { background: ${tema.bg}; }
-    body { margin: 0; background: ${tema.bg}; }
+    html { background: ${tema.bg}; overflow-x: hidden; }
+    body { margin: 0; background: ${tema.bg}; overflow-x: hidden; }
     button, input, select, textarea { font-family: inherit; }
     button:hover { transform: translateY(-1px); filter: brightness(1.08); }
     button:active { transform: translateY(0px) scale(0.99); }
@@ -726,62 +726,118 @@ function App() {
       0%, 100% { box-shadow: 0 18px 44px rgba(0,0,0,0.18); }
       50% { box-shadow: 0 22px 58px ${tema.accent}33; }
     }
-    @keyframes bpSpin {
-      to { transform: rotate(360deg); }
-    }
-    .bp-shell > div > div:not(.bp-nav) {
-      animation: bpFadeUp 0.34s ease both;
-    }
-    .bp-brand-card {
-      animation: bpPulseGlow 5s ease-in-out infinite;
-    }
-    button {
-      will-change: transform, filter;
-    }
+    @keyframes bpSpin { to { transform: rotate(360deg); } }
+    .bp-shell > div > div:not(.bp-nav) { animation: bpFadeUp 0.34s ease both; }
+    .bp-brand-card { animation: bpPulseGlow 5s ease-in-out infinite; }
+    button { will-change: transform, filter; }
     input:focus, select:focus, textarea:focus {
       border-color: ${tema.accent} !important;
       box-shadow: 0 0 0 3px ${tema.accent}22, 0 16px 34px rgba(0,0,0,0.16) !important;
     }
+
     @media (max-width: 780px) {
-      .bp-shell { padding: 10px !important; padding-bottom: 92px !important; }
-      .bp-brand-card { padding: 16px !important; border-radius: 24px !important; }
-      .bp-brand-title { font-size: 30px !important; line-height: 1 !important; }
-      .bp-brand-card > div:first-of-type { gap: 12px !important; }
-      .bp-brand-card p { font-size: 12px !important; }
+      html, body, #root { width: 100%; max-width: 100%; overflow-x: hidden !important; }
+      body { -webkit-text-size-adjust: 100%; }
+
+      .bp-login-grid {
+        max-width: 100% !important;
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+      }
+      .bp-login-grid > div {
+        min-width: 0 !important;
+        min-height: auto !important;
+        padding: 18px !important;
+        border-radius: 24px !important;
+      }
+      .bp-login-grid h1 { font-size: 42px !important; line-height: .92 !important; }
+      .bp-login-grid h2 { font-size: 25px !important; }
+      .bp-login-grid p { font-size: 14px !important; line-height: 1.35 !important; }
+
+      .bp-shell {
+        width: 100% !important;
+        max-width: 100vw !important;
+        padding: 10px 10px 92px !important;
+        overflow-x: hidden !important;
+      }
+      .bp-shell > div { max-width: 100% !important; min-width: 0 !important; }
+
+      .bp-brand-card {
+        padding: 14px !important;
+        border-radius: 24px !important;
+        align-items: stretch !important;
+        gap: 12px !important;
+      }
+      .bp-brand-card img {
+        width: 64px !important;
+        height: 64px !important;
+        border-radius: 20px !important;
+      }
+      .bp-brand-title { font-size: 29px !important; line-height: 1 !important; }
+      .bp-brand-card p { font-size: 12px !important; line-height: 1.25 !important; }
+      .bp-brand-card button { width: 100% !important; min-height: 44px !important; padding: 10px 12px !important; }
+
       .bp-nav {
         position: fixed !important;
         left: 10px !important;
         right: 10px !important;
-        bottom: 10px !important;
+        bottom: calc(10px + env(safe-area-inset-bottom)) !important;
         top: auto !important;
         z-index: 999 !important;
-        display: grid !important;
-        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-        gap: 7px !important;
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        gap: 8px !important;
         padding: 8px !important;
         border-radius: 22px !important;
-        max-height: 86px !important;
-        overflow-y: auto !important;
-        box-shadow: 0 18px 45px rgba(0,0,0,0.35) !important;
+        max-height: 64px !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        -webkit-overflow-scrolling: touch;
+        box-shadow: 0 18px 45px rgba(0,0,0,0.42) !important;
+        scrollbar-width: none;
       }
+      .bp-nav::-webkit-scrollbar { display: none; }
       .bp-nav button {
-        width: 100%;
-        min-height: 42px;
-        padding: 8px 6px !important;
-        font-size: 10px !important;
-        border-radius: 14px !important;
+        flex: 0 0 auto !important;
+        width: auto !important;
+        min-width: 98px !important;
+        max-width: 132px !important;
+        min-height: 46px !important;
+        padding: 8px 10px !important;
+        font-size: 11px !important;
+        border-radius: 15px !important;
         line-height: 1.05 !important;
+        white-space: nowrap !important;
       }
+
+      .bp-shell h1 { font-size: 30px !important; line-height: 1.05 !important; }
+      .bp-shell h2 { font-size: 25px !important; line-height: 1.08 !important; text-align: left !important; }
+      .bp-shell h3 { font-size: 20px !important; line-height: 1.12 !important; }
+      .bp-shell p { line-height: 1.35 !important; }
+      .bp-shell input, .bp-shell select, .bp-shell textarea,
+      .bp-login-grid input, .bp-login-grid select, .bp-login-grid textarea {
+        font-size: 16px !important;
+        min-height: 50px !important;
+      }
+
       .bp-form-grid { grid-template-columns: 1fr !important; }
-      .bp-action-row { display: grid !important; grid-template-columns: 1fr !important; }
-      .bp-action-row button { width: 100%; min-height: 48px; }
-      input, select, textarea { font-size: 16px !important; }
-      h2 { text-align: left !important; }
+      .bp-action-row { display: grid !important; grid-template-columns: 1fr 1fr !important; }
+      .bp-action-row button { width: 100%; min-height: 46px; }
     }
+
     @media (max-width: 480px) {
-      .bp-nav { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; max-height: 142px !important; }
-      .bp-brand-card { align-items: flex-start !important; }
-      .bp-brand-card button { width: 100% !important; }
+      .bp-shell { padding: 8px 8px 86px !important; }
+      .bp-shell > div:not(.bp-nav) { border-radius: 22px !important; }
+      .bp-brand-card { padding: 12px !important; }
+      .bp-brand-card img { width: 58px !important; height: 58px !important; }
+      .bp-brand-title { font-size: 26px !important; }
+      .bp-nav { left: 8px !important; right: 8px !important; max-height: 60px !important; }
+      .bp-nav button { min-width: 92px !important; min-height: 42px !important; font-size: 10px !important; }
+      .bp-shell [style*="grid-template-columns: repeat(3"],
+      .bp-shell [style*="gridTemplateColumns: repeat(3"],
+      .bp-shell [style*="grid-template-columns: repeat(auto-fit"] {
+        grid-template-columns: 1fr !important;
+      }
     }
   `;
 
@@ -3850,6 +3906,7 @@ function App() {
       >
         <style>{globalCss}</style>
         <div
+          className="bp-login-grid"
           style={{
             width: "100%",
             maxWidth: "980px",
