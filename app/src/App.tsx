@@ -1605,6 +1605,435 @@ function App() {
       .bp-shell h3 { font-size: 17px !important; }
     }
 
+
+    /* ===== Mobile App Home — layout comercial tipo app nativo ===== */
+    .bp-mobile-app-home {
+      display: none;
+    }
+
+    @media (max-width: 780px) {
+      .bp-brand-card {
+        display: none !important;
+      }
+
+      .bp-original-inicio-v3 {
+        display: none !important;
+      }
+
+      .bp-mobile-app-home {
+        display: block !important;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        padding: 4px 0 8px;
+      }
+
+      .bp-mobile-topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 8px 2px 14px;
+      }
+
+      .bp-mobile-logo-wrap {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-width: 0;
+      }
+
+      .bp-mobile-real-logo {
+        width: 58px;
+        height: 58px;
+        min-width: 58px;
+        border-radius: 18px;
+        object-fit: cover;
+        box-shadow: 0 14px 36px rgba(139,92,246,0.34), 0 0 0 1px rgba(255,255,255,0.08);
+      }
+
+      .bp-mobile-app-title {
+        font-size: 25px;
+        line-height: 0.95;
+        font-weight: 1000;
+        letter-spacing: -0.06em;
+        color: #fff;
+        white-space: nowrap;
+      }
+
+      .bp-mobile-app-title b {
+        color: #8b5cf6;
+      }
+
+      .bp-mobile-app-email {
+        font-size: 10px;
+        line-height: 1.1;
+        color: rgba(203,213,225,0.72);
+        font-weight: 800;
+        max-width: 190px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .bp-mobile-avatar {
+        width: 44px;
+        height: 44px;
+        border-radius: 999px;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(145deg, rgba(30,41,59,0.96), rgba(15,23,42,0.96));
+        border: 1px solid rgba(148,163,184,0.20);
+        color: #fff;
+        font-weight: 1000;
+        box-shadow: 0 12px 30px rgba(0,0,0,0.34);
+      }
+
+      .bp-hero-banca {
+        position: relative;
+        border-radius: 26px;
+        padding: 20px;
+        margin-bottom: 14px;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 88% 22%, rgba(34,197,94,0.26), transparent 34%),
+          linear-gradient(145deg, rgba(6,78,59,0.72), rgba(15,23,42,0.94));
+        border: 1px solid rgba(34,197,94,0.28);
+        box-shadow: 0 22px 58px rgba(0,0,0,0.42);
+      }
+
+      .bp-hero-label {
+        color: rgba(203,213,225,0.82);
+        font-size: 11px;
+        font-weight: 1000;
+        letter-spacing: 0.10em;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+      }
+
+      .bp-hero-value {
+        color: #fff;
+        font-size: 36px;
+        font-weight: 1000;
+        letter-spacing: -0.06em;
+        line-height: 1;
+      }
+
+      .bp-hero-profit {
+        margin-top: 14px;
+        color: #22c55e;
+        font-size: 18px;
+        font-weight: 1000;
+      }
+
+      .bp-hero-mini-chart {
+        position: absolute;
+        right: 18px;
+        bottom: 22px;
+        width: 42%;
+        max-width: 170px;
+        opacity: 0.95;
+      }
+
+      .bp-shortcuts {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 9px;
+        margin: 14px 0;
+      }
+
+      .bp-shortcut {
+        min-height: 94px;
+        border-radius: 20px;
+        border: 1px solid rgba(148,163,184,0.16);
+        background: linear-gradient(145deg, rgba(30,41,59,0.86), rgba(15,23,42,0.96));
+        box-shadow: 0 14px 34px rgba(0,0,0,0.30);
+        display: grid;
+        place-items: center;
+        text-align: center;
+        color: #fff;
+        font-weight: 950;
+        padding: 10px 6px;
+      }
+
+      .bp-shortcut-icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 13px;
+        display: grid;
+        place-items: center;
+        margin-bottom: 7px;
+        font-size: 20px;
+        background: linear-gradient(145deg, #22c55e, #14b8a6);
+        box-shadow: 0 12px 25px rgba(34,197,94,0.28);
+      }
+
+      .bp-shortcut:nth-child(2) .bp-shortcut-icon { background: linear-gradient(145deg, #8b5cf6, #6366f1); }
+      .bp-shortcut:nth-child(3) .bp-shortcut-icon { background: linear-gradient(145deg, #f97316, #f59e0b); }
+      .bp-shortcut:nth-child(4) .bp-shortcut-icon { background: linear-gradient(145deg, #3b82f6, #06b6d4); }
+
+      .bp-shortcut small {
+        display: block;
+        margin-top: 3px;
+        color: rgba(203,213,225,0.75);
+        font-size: 10px;
+        font-weight: 850;
+      }
+
+      .bp-mobile-card-clean {
+        border-radius: 24px;
+        border: 1px solid rgba(148,163,184,0.16);
+        background: linear-gradient(145deg, rgba(30,41,59,0.83), rgba(15,23,42,0.95));
+        box-shadow: 0 18px 46px rgba(0,0,0,0.36);
+        padding: 16px;
+        margin: 14px 0;
+        overflow: hidden;
+      }
+
+      .bp-mobile-section-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 12px;
+      }
+
+      .bp-mobile-section-title {
+        font-size: 20px;
+        color: #fff;
+        font-weight: 1000;
+        letter-spacing: -0.04em;
+        line-height: 1.05;
+        margin: 0;
+      }
+
+      .bp-mobile-section-link {
+        color: rgba(203,213,225,0.84);
+        font-size: 12px;
+        font-weight: 900;
+        white-space: nowrap;
+      }
+
+      .bp-alert-commercial {
+        display: grid;
+        grid-template-columns: 46px 1fr auto;
+        gap: 11px;
+        align-items: center;
+        border-radius: 18px;
+        padding: 13px;
+        border: 1px solid rgba(244,63,94,0.60);
+        background: linear-gradient(135deg, rgba(244,63,94,0.13), rgba(15,23,42,0.86));
+      }
+
+      .bp-alert-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 999px;
+        display: grid;
+        place-items: center;
+        background: rgba(244,63,94,0.24);
+        color: #fb7185;
+        font-size: 20px;
+        font-weight: 1000;
+      }
+
+      .bp-alert-title {
+        color: #fb7185;
+        font-size: 17px;
+        font-weight: 1000;
+        line-height: 1.1;
+      }
+
+      .bp-alert-sub {
+        color: rgba(226,232,240,0.82);
+        font-size: 12px;
+        line-height: 1.25;
+        font-weight: 750;
+        margin-top: 4px;
+      }
+
+      .bp-alert-roi {
+        color: #fb7185;
+        font-size: 13px;
+        font-weight: 1000;
+        white-space: nowrap;
+      }
+
+      .bp-games-list {
+        display: grid;
+        gap: 11px;
+      }
+
+      .bp-game-commercial {
+        position: relative;
+        border-radius: 22px;
+        border: 1px solid rgba(148,163,184,0.16);
+        background: linear-gradient(145deg, rgba(15,23,42,0.96), rgba(2,6,23,0.94));
+        padding: 14px;
+        overflow: hidden;
+      }
+
+      .bp-game-meta {
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+        align-items: center;
+        color: rgba(203,213,225,0.78);
+        font-size: 11px;
+        font-weight: 850;
+        margin-bottom: 12px;
+      }
+
+      .bp-league-pill {
+        border: 1px solid rgba(148,163,184,0.20);
+        border-radius: 999px;
+        padding: 5px 10px;
+        color: #dbeafe;
+        font-size: 10px;
+        font-weight: 950;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+
+      .bp-teams-row {
+        display: grid;
+        grid-template-columns: 1fr 32px 1fr;
+        align-items: center;
+        gap: 8px;
+        text-align: center;
+        margin-bottom: 13px;
+      }
+
+      .bp-team-side {
+        display: grid;
+        place-items: center;
+        gap: 6px;
+        min-width: 0;
+      }
+
+      .bp-team-ball {
+        width: 42px;
+        height: 42px;
+        border-radius: 999px;
+        display: grid;
+        place-items: center;
+        color: white;
+        font-size: 15px;
+        font-weight: 1000;
+        background: linear-gradient(145deg, #8b5cf6, #1e293b);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.22), 0 10px 25px rgba(0,0,0,0.25);
+      }
+
+      .bp-team-name {
+        color: #fff;
+        font-size: 13px;
+        font-weight: 950;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .bp-vs {
+        color: rgba(203,213,225,0.78);
+        font-size: 16px;
+        font-weight: 1000;
+      }
+
+      .bp-odds-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 7px;
+      }
+
+      .bp-odd-box {
+        border-radius: 13px;
+        background: rgba(30,41,59,0.88);
+        border: 1px solid rgba(148,163,184,0.15);
+        padding: 9px 7px;
+        display: flex;
+        justify-content: space-between;
+        gap: 6px;
+        color: #cbd5e1;
+        font-weight: 900;
+        font-size: 12px;
+      }
+
+      .bp-odd-box b {
+        color: #22c55e;
+      }
+
+      .bp-mobile-more-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        margin-top: 12px;
+      }
+
+      .bp-mobile-more-btn {
+        border-radius: 15px;
+        border: 1px solid rgba(148,163,184,0.16);
+        background: rgba(15,23,42,0.88);
+        color: #fff;
+        min-height: 46px;
+        font-size: 11px;
+        font-weight: 950;
+      }
+
+      /* Botão de status cortado nos gráficos */
+      .bp-mobile-app-home [style*="POSIT"] {
+        max-width: 104px !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .bp-shortcuts {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+      }
+
+      .bp-shortcut {
+        min-height: 84px;
+        border-radius: 18px;
+        font-size: 12px;
+      }
+
+      .bp-shortcut-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 12px;
+        font-size: 18px;
+      }
+
+      .bp-hero-banca {
+        padding: 17px;
+      }
+
+      .bp-hero-value {
+        font-size: 32px;
+      }
+
+      .bp-hero-mini-chart {
+        width: 40%;
+        right: 14px;
+      }
+
+      .bp-mobile-section-title {
+        font-size: 19px;
+      }
+
+      .bp-alert-title {
+        font-size: 16px;
+      }
+
+      .bp-mobile-more-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
   `;
 
   const sectionTitleStyle: CSSProperties = {
@@ -4617,6 +5046,161 @@ function App() {
     );
   }
 
+
+  function MobileAppComercialHome() {
+    const bancaPrincipal = bancas[0];
+    const saldoPrincipal = bancaPrincipal ? calcularAtualAutomatico(bancaPrincipal.id) : bancaAtualGeral;
+    const lucroMes = dashboardInteligente.mes.lucro;
+    const lucroMesPct = totalDepositadoGeral ? (lucroMes / totalDepositadoGeral) * 100 : roiGeral;
+    const alertaMercado = dashboardInteligente.piorMercado;
+    const jogosMobile = proximosJogosAgenda.slice(0, 2);
+    const iniciais = (nome: string) =>
+      nome
+        .split(/\s+/)
+        .filter(Boolean)
+        .slice(0, 2)
+        .map((p) => p[0])
+        .join("")
+        .toUpperCase()
+        .slice(0, 2) || "BP";
+
+    return (
+      <div className="bp-mobile-app-home">
+        <div className="bp-mobile-topbar">
+          <div className="bp-mobile-logo-wrap" onClick={() => setTela("inicio")}>
+            <img className="bp-mobile-real-logo" src="/logo.png" alt="Banca Pro" />
+            <div style={{ minWidth: 0 }}>
+              <div className="bp-mobile-app-title">Banca <b>Pro</b></div>
+              <div className="bp-mobile-app-email">{user?.email || ""}</div>
+            </div>
+          </div>
+          <button className="bp-mobile-avatar" onClick={sair} title="Sair">⏻</button>
+        </div>
+
+        <div className="bp-hero-banca">
+          <div className="bp-hero-label">Banca principal</div>
+          <div className="bp-hero-value">{formatCurrency(saldoPrincipal)}</div>
+          <div className="bp-hero-profit">
+            {lucroMes >= 0 ? "+" : ""}{formatCurrency(lucroMes)} ({lucroMesPct.toFixed(1)}%)
+          </div>
+          <svg className="bp-hero-mini-chart" viewBox="0 0 180 80" fill="none">
+            <path d="M5 62 C32 48 47 70 72 50 C95 32 105 44 124 25 C145 7 154 20 176 8" stroke={tema.good} strokeWidth="6" strokeLinecap="round"/>
+            <path d="M5 62 C32 48 47 70 72 50 C95 32 105 44 124 25 C145 7 154 20 176 8" stroke={tema.good} strokeWidth="16" strokeLinecap="round" opacity="0.10"/>
+            <circle cx="176" cy="8" r="6" fill={tema.good}/>
+          </svg>
+        </div>
+
+        <div className="bp-shortcuts">
+          <button className="bp-shortcut" onClick={() => setTela("apostas")}>
+            <div className="bp-shortcut-icon">📈</div>
+            Registrar <small>Aposta</small>
+          </button>
+          <button className="bp-shortcut" onClick={() => setTela("agenda")}>
+            <div className="bp-shortcut-icon">📅</div>
+            Agenda <small>Jogos</small>
+          </button>
+          <button className="bp-shortcut" onClick={() => setTela("historico")}>
+            <div className="bp-shortcut-icon">🧠</div>
+            Análises <small>IA</small>
+          </button>
+          <button className="bp-shortcut" onClick={() => setTela("financeiro")}>
+            <div className="bp-shortcut-icon">💳</div>
+            Financeiro <small>Banca</small>
+          </button>
+        </div>
+
+        <div className="bp-mobile-card-clean">
+          <div className="bp-mobile-section-row">
+            <h2 className="bp-mobile-section-title">IA automática</h2>
+            <span className="bp-league-pill">2 alertas</span>
+          </div>
+          <div className="bp-alert-commercial">
+            <div className="bp-alert-icon">🎯</div>
+            <div>
+              <div className="bp-alert-title">{alertaMercado?.nome || "Mercado de atenção"}</div>
+              <div className="bp-alert-sub">
+                {alertaMercado
+                  ? "Este mercado está a puxar a banca para baixo. Reduz stake ou pausa."
+                  : "Ainda não há padrão negativo suficiente para cortar mercados."}
+              </div>
+            </div>
+            <div className="bp-alert-roi">ROI {alertaMercado ? alertaMercado.roi.toFixed(1) : "0.0"}%</div>
+          </div>
+        </div>
+
+        <div className="bp-mobile-card-clean">
+          <div className="bp-mobile-section-row">
+            <h2 className="bp-mobile-section-title">Próximos jogos</h2>
+            <button className="bp-mobile-section-link" onClick={() => setTela("agenda")} style={{ background: "transparent", border: 0 }}>
+              Ver todos ›
+            </button>
+          </div>
+
+          <div className="bp-games-list">
+            {(jogosMobile.length ? jogosMobile : agenda.slice(0, 2)).map((jogo) => (
+              <div className="bp-game-commercial" key={jogo.id}>
+                <div className="bp-game-meta">
+                  <span>{jogo.data ? new Date(`${jogo.data}T${jogo.hora || "00:00"}`).toLocaleDateString("pt-PT") : "Hoje"} · {jogo.hora || "--:--"}</span>
+                  <span className="bp-league-pill">{jogo.liga || "Liga"}</span>
+                </div>
+
+                <div className="bp-teams-row">
+                  <div className="bp-team-side">
+                    <div className="bp-team-ball">{iniciais(jogo.casa)}</div>
+                    <div className="bp-team-name">{jogo.casa}</div>
+                  </div>
+                  <div className="bp-vs">VS</div>
+                  <div className="bp-team-side">
+                    <div className="bp-team-ball">{iniciais(jogo.fora)}</div>
+                    <div className="bp-team-name">{jogo.fora}</div>
+                  </div>
+                </div>
+
+                <div className="bp-odds-row">
+                  <div className="bp-odd-box"><span>1</span><b>1.85</b></div>
+                  <div className="bp-odd-box"><span>X</span><b>3.25</b></div>
+                  <div className="bp-odd-box"><span>2</span><b>2.10</b></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="bp-mobile-card-clean">
+          <div className="bp-mobile-section-row">
+            <h2 className="bp-mobile-section-title">Resumo rápido</h2>
+            <span className="bp-mobile-section-link">Hoje</span>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "9px" }}>
+            <div className="bp-game-commercial">
+              <div className="bp-hero-label">Lucro total</div>
+              <div style={{ color: lucroTotalGeral >= 0 ? tema.good : tema.bad, fontSize: "24px", fontWeight: 1000 }}>{formatCurrency(lucroTotalGeral)}</div>
+            </div>
+            <div className="bp-game-commercial">
+              <div className="bp-hero-label">ROI geral</div>
+              <div style={{ color: roiGeral >= 0 ? tema.good : tema.bad, fontSize: "24px", fontWeight: 1000 }}>{roiGeral.toFixed(1)}%</div>
+            </div>
+            <div className="bp-game-commercial">
+              <div className="bp-hero-label">Greens</div>
+              <div style={{ color: tema.good, fontSize: "24px", fontWeight: 1000 }}>{totalGreens}</div>
+            </div>
+            <div className="bp-game-commercial">
+              <div className="bp-hero-label">Pendentes</div>
+              <div style={{ color: tema.warn, fontSize: "24px", fontWeight: 1000 }}>{totalPendentes}</div>
+            </div>
+          </div>
+
+          <div className="bp-mobile-more-grid">
+            <button className="bp-mobile-more-btn" onClick={() => setTela("ferramentas")}>🧮 Ferram.</button>
+            <button className="bp-mobile-more-btn" onClick={() => setTela("historico")}>🧠 IA</button>
+            <button className="bp-mobile-more-btn" onClick={() => setTela("config")}>⚙️ Config</button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+
   if (loading) {
     return (
       <div
@@ -4950,7 +5534,7 @@ function App() {
                 </h1>
               </div>
               <p style={{ margin: "9px 0 0", color: tema.muted, fontWeight: 900, overflowWrap: "anywhere" }}>
-                Gestão premium de banca · {user.email}
+                Gestão premium de banca · {user?.email || ""}
               </p>
             </div>
           </div>
@@ -4964,12 +5548,9 @@ function App() {
           {[
             ["inicio", "🏠", "Início"],
             ["bancas", "💼", "Banca"],
-            ["financeiro", "💰", "Financeiro"],
-            ["agenda", "📅", "Agenda"],
             ["apostas", "🎟️", "Apostas"],
-            ["ferramentas", "🧮", "Ferramentas"],
-            ["historico", "🧠", "Histórico"],
-            ["config", "⚙️", "Config"],
+            ["agenda", "📅", "Agenda"],
+            ["config", "•••", "Mais"],
           ].map(([v, icon, l]) => (
             <button
               key={v}
@@ -5001,8 +5582,10 @@ function App() {
           </div>
         )}
 
+        {tela === "inicio" && <MobileAppComercialHome />}
+
         {tela === "inicio" && (
-          <div style={{ display: "grid", gap: "20px" }}>
+          <div className="bp-original-inicio-v3" style={{ display: "grid", gap: "20px" }}>
             {jogosHoje.length > 0 && (
               <div style={cardStyle}>
                 <h2 style={{ marginTop: 0 }}>🔔 Jogos marcados para hoje</h2>
@@ -5877,7 +6460,7 @@ export default App;
 // Agenda Premium patch applied.
 
 
-// Versão Mobile Comercial Final Polida: navegação inferior, inputs mobile-friendly e cards mais confortáveis no telemóvel.
+// Versão Mobile App Comercial Final: navegação inferior, inputs mobile-friendly e cards mais confortáveis no telemóvel.
 
 
 // Versão Apple Level: animações premium, loading cinematográfico, foco visual e microinterações.
