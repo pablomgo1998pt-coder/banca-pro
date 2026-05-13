@@ -839,6 +839,172 @@ function App() {
         grid-template-columns: 1fr !important;
       }
     }
+    @media (max-width: 780px) {
+      body { overflow-x: hidden; }
+      .bp-shell {
+        padding: 10px !important;
+        padding-bottom: 118px !important;
+      }
+
+      .bp-brand-card {
+        padding: 12px !important;
+        border-radius: 20px !important;
+        margin-bottom: 10px !important;
+        gap: 10px !important;
+      }
+
+      .bp-brand-card > div[style*="cursor"] {
+        gap: 10px !important;
+        width: 100% !important;
+      }
+
+      .bp-brand-card img {
+        width: 54px !important;
+        height: 54px !important;
+        border-radius: 16px !important;
+      }
+
+      .bp-brand-title {
+        font-size: 24px !important;
+        line-height: 0.95 !important;
+        letter-spacing: -0.06em !important;
+      }
+
+      .bp-brand-card p {
+        font-size: 11px !important;
+        line-height: 1.2 !important;
+        margin-top: 5px !important;
+        max-width: 230px !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+      }
+
+      .bp-brand-card > button {
+        position: absolute !important;
+        right: 12px !important;
+        top: 12px !important;
+        padding: 8px 10px !important;
+        border-radius: 12px !important;
+        font-size: 11px !important;
+        min-height: auto !important;
+      }
+
+      .bp-nav {
+        position: fixed !important;
+        left: 10px !important;
+        right: 10px !important;
+        bottom: 10px !important;
+        top: auto !important;
+        z-index: 999 !important;
+        display: grid !important;
+        grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+        gap: 6px !important;
+        padding: 7px !important;
+        border-radius: 22px !important;
+        max-height: 72px !important;
+        overflow: hidden !important;
+        box-shadow: 0 18px 45px rgba(0,0,0,0.45) !important;
+        backdrop-filter: blur(18px) !important;
+      }
+
+      .bp-nav button {
+        width: 100% !important;
+        min-height: 48px !important;
+        padding: 6px 4px !important;
+        font-size: 0 !important;
+        border-radius: 16px !important;
+        line-height: 1 !important;
+        display: grid !important;
+        place-items: center !important;
+        box-shadow: none !important;
+      }
+
+      .bp-nav button::first-letter {
+        font-size: 18px !important;
+      }
+
+      .bp-nav button span,
+      .bp-nav button small {
+        display: none !important;
+      }
+
+      .bp-login-hero {
+        display: none !important;
+      }
+
+      .bp-form-grid {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+      }
+
+      .bp-action-row {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+      }
+
+      .bp-action-row button {
+        width: 100% !important;
+        min-height: 46px !important;
+      }
+
+      input, select, textarea {
+        font-size: 16px !important;
+        min-height: 44px !important;
+      }
+
+      h1 { font-size: 32px !important; }
+      h2 { font-size: 22px !important; text-align: left !important; }
+      h3 { font-size: 18px !important; }
+
+      .bp-shell [style*="border-radius: 24px"],
+      .bp-shell [style*="borderRadius: 24px"] {
+        border-radius: 18px !important;
+      }
+
+      .bp-shell div[style*="grid-template-columns: repeat(auto-fit"] {
+        grid-template-columns: 1fr !important;
+      }
+
+      .bp-shell div[style*="minmax(320px"] {
+        grid-template-columns: 1fr !important;
+      }
+
+      .bp-shell div[style*="minmax(230px"] {
+        grid-template-columns: 1fr !important;
+      }
+
+      .bp-shell div[style*="minmax(220px"] {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .bp-shell {
+        padding: 8px !important;
+        padding-bottom: 112px !important;
+      }
+
+      .bp-brand-card {
+        border-radius: 18px !important;
+      }
+
+      .bp-nav {
+        left: 8px !important;
+        right: 8px !important;
+        bottom: 8px !important;
+        max-height: 70px !important;
+        grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+      }
+
+      .bp-nav button {
+        min-height: 46px !important;
+      }
+
+      .bp-brand-card button {
+        width: auto !important;
+      }
+    }
   `;
 
   const sectionTitleStyle: CSSProperties = {
@@ -3956,6 +4122,7 @@ function App() {
           }}
         >
           <div
+            className="bp-login-hero"
             style={{
               ...cardStyle,
               minHeight: "520px",
@@ -4195,20 +4362,20 @@ function App() {
 
         <div className="bp-nav" style={{ display: "flex", gap: "10px", flexWrap: "wrap", marginBottom: "18px", position: "sticky", top: "10px", zIndex: 20, padding: "8px", borderRadius: "18px", background: temaNome === "claro" ? "rgba(255,255,255,0.80)" : "rgba(3,4,9,0.70)", backdropFilter: "blur(18px)", border: `1px solid ${tema.border}` }}>
           {[
-            ["inicio", "Início"],
-            ["bancas", "Gestão de Bancas"],
-            ["financeiro", "Financeiro"],
-            ["agenda", "Agenda"],
-            ["ferramentas", "Ferramentas"],
-            ["apostas", "Registro de Apostas"],
-            ["historico", "Histórico/IA"],
-            ["config", "Configurações"],
-          ].map(([v, l]) => (
+            ["inicio", "🏠", "Início"],
+            ["bancas", "💼", "Banca"],
+            ["financeiro", "💰", "Financeiro"],
+            ["agenda", "📅", "Agenda"],
+            ["apostas", "🎟️", "Apostas"],
+            ["ferramentas", "🧮", "Ferramentas"],
+            ["historico", "🧠", "Histórico"],
+            ["config", "⚙️", "Config"],
+          ].map(([v, icon, l]) => (
             <button
               key={v}
               onClick={() => setTela(v as TelaInterna)}
               style={{
-                padding: "11px 15px",
+                padding: "10px 13px",
                 borderRadius: "14px",
                 border: tela === v ? `1px solid ${tema.accent}` : `1px solid ${tema.border}`,
                 background: tela === v ? `linear-gradient(135deg, ${tema.accent}, #6d28d9)` : `linear-gradient(180deg, ${tema.accent2}, ${tema.card2})`,
@@ -4216,9 +4383,14 @@ function App() {
                 cursor: "pointer",
                 fontWeight: 900,
                 boxShadow: tela === v ? `0 14px 30px ${tema.accent}42` : "0 10px 20px rgba(0,0,0,0.16)",
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "7px",
               }}
             >
-              {l}
+              <span style={{ fontSize: "18px", lineHeight: 1 }}>{icon}</span>
+              <small style={{ fontSize: "11px", fontWeight: 900, lineHeight: 1.1 }}>{l}</small>
             </button>
           ))}
         </div>
