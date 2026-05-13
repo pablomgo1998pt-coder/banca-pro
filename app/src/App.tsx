@@ -1251,26 +1251,62 @@ function App() {
     return !error;
   }
 
+  function limparEmail(valor: string) {
+    return valor.trim().replace(/\s+/g, "").toLowerCase();
+  }
+
+  function emailValido(valor: string) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(valor);
+  }
+
   async function entrar() {
+    const emailLimpo = limparEmail(email);
+    const senhaLimpa = senha.trim();
+
+    setEmail(emailLimpo);
     setMensagem("A entrar...");
 
+    if (!emailValido(emailLimpo)) {
+      setMensagem("Email inválido. Confere se está escrito sem espaços e no formato nome@email.com");
+      return;
+    }
+
+    if (!senhaLimpa) {
+      setMensagem("Digite a senha para entrar.");
+      return;
+    }
+
     const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password: senha,
+      email: emailLimpo,
+      password: senhaLimpa,
     });
 
     setMensagem(error ? "Credenciais inválidas ou conta não confirmada." : "Login feito com sucesso.");
   }
 
   async function cadastrar() {
+    const emailLimpo = limparEmail(email);
+    const senhaLimpa = senha.trim();
+
+    setEmail(emailLimpo);
     setMensagem("A criar conta...");
 
+    if (!emailValido(emailLimpo)) {
+      setMensagem("Email inválido. Confere se está escrito sem espaços e no formato nome@email.com");
+      return;
+    }
+
+    if (senhaLimpa.length < 6) {
+      setMensagem("A senha precisa ter pelo menos 6 caracteres.");
+      return;
+    }
+
     const { error } = await supabase.auth.signUp({
-      email,
-      password: senha,
+      email: emailLimpo,
+      password: senhaLimpa,
       options: {
         data: {
-          phone: telefone,
+          phone: telefone.trim(),
         },
       },
     });
@@ -1279,12 +1315,15 @@ function App() {
   }
 
   async function recuperarSenha() {
-    if (!email.trim()) {
-      setMensagem("Digite o teu email para recuperar a senha.");
+    const emailLimpo = limparEmail(email);
+    setEmail(emailLimpo);
+
+    if (!emailValido(emailLimpo)) {
+      setMensagem("Digite um email válido para recuperar a senha.");
       return;
     }
 
-    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+    const { error } = await supabase.auth.resetPasswordForEmail(emailLimpo, {
       redirectTo: window.location.origin,
     });
 
