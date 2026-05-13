@@ -1005,6 +1005,282 @@ function App() {
         width: auto !important;
       }
     }
+
+    /* ===== Banca Pro Mobile Commercial UI v1 ===== */
+    @media (max-width: 780px) {
+      html, body, #root {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+        background: #05070d !important;
+      }
+
+      .bp-shell {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 14px 14px 112px !important;
+        overflow-x: hidden !important;
+        box-sizing: border-box !important;
+      }
+
+      .bp-shell * {
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+      }
+
+      .bp-brand-card {
+        min-height: auto !important;
+        padding: 14px !important;
+        border-radius: 26px !important;
+        margin: 0 0 14px !important;
+        display: grid !important;
+        grid-template-columns: 54px minmax(0, 1fr) auto !important;
+        align-items: center !important;
+        gap: 10px !important;
+        background: linear-gradient(145deg, rgba(17,24,39,0.96), rgba(16,20,34,0.92)) !important;
+        border: 1px solid rgba(148,163,184,0.18) !important;
+        box-shadow: 0 20px 55px rgba(0,0,0,0.38) !important;
+        overflow: hidden !important;
+      }
+
+      .bp-brand-card > div[style*="cursor"] {
+        display: contents !important;
+      }
+
+      .bp-brand-card img,
+      .bp-mobile-logo {
+        width: 54px !important;
+        height: 54px !important;
+        min-width: 54px !important;
+        border-radius: 18px !important;
+        object-fit: cover !important;
+        box-shadow: 0 10px 26px rgba(139,92,246,0.32) !important;
+      }
+
+      .bp-brand-card .bp-brand-title {
+        font-size: 25px !important;
+        line-height: 0.92 !important;
+        letter-spacing: -0.065em !important;
+      }
+
+      .bp-brand-card p {
+        margin: 4px 0 0 !important;
+        font-size: 11px !important;
+        line-height: 1.15 !important;
+        color: rgba(203,213,225,0.78) !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+      }
+
+      .bp-brand-card > button {
+        position: static !important;
+        padding: 9px 11px !important;
+        min-height: 38px !important;
+        border-radius: 14px !important;
+        font-size: 0 !important;
+        width: 42px !important;
+        height: 42px !important;
+        display: grid !important;
+        place-items: center !important;
+      }
+
+      .bp-brand-card > button::after {
+        content: "⏻";
+        font-size: 18px;
+      }
+
+      .bp-nav {
+        position: fixed !important;
+        left: 12px !important;
+        right: 12px !important;
+        bottom: calc(10px + env(safe-area-inset-bottom)) !important;
+        z-index: 9999 !important;
+        height: 74px !important;
+        max-height: 74px !important;
+        padding: 8px !important;
+        display: grid !important;
+        grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+        gap: 5px !important;
+        overflow: hidden !important;
+        border-radius: 26px !important;
+        border: 1px solid rgba(148,163,184,0.24) !important;
+        background: linear-gradient(180deg, rgba(17,24,39,0.94), rgba(3,7,18,0.96)) !important;
+        box-shadow: 0 18px 60px rgba(0,0,0,0.58) !important;
+        backdrop-filter: blur(22px) !important;
+      }
+
+      .bp-nav button {
+        min-width: 0 !important;
+        width: 100% !important;
+        height: 56px !important;
+        min-height: 56px !important;
+        padding: 5px 3px !important;
+        border-radius: 19px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 3px !important;
+        font-size: 0 !important;
+        line-height: 1 !important;
+        box-shadow: none !important;
+        overflow: hidden !important;
+      }
+
+      .bp-nav button:nth-child(n+6) {
+        display: none !important;
+      }
+
+      .bp-nav button span {
+        display: block !important;
+        font-size: 20px !important;
+        line-height: 1 !important;
+      }
+
+      .bp-nav button small {
+        display: block !important;
+        font-size: 10px !important;
+        line-height: 1 !important;
+        max-width: 58px !important;
+        overflow: hidden !important;
+        white-space: nowrap !important;
+        text-overflow: ellipsis !important;
+      }
+
+      .bp-shell > div:not(.bp-nav):not(.bp-brand-card),
+      .bp-shell section,
+      .bp-shell article {
+        border-radius: 24px !important;
+      }
+
+      .bp-shell div[style*="padding: 30px"],
+      .bp-shell div[style*="padding: \"30px\""] {
+        padding: 18px !important;
+      }
+
+      .bp-shell div[style*="padding: 26px"],
+      .bp-shell div[style*="padding: \"26px\""] {
+        padding: 16px !important;
+      }
+
+      .bp-shell div[style*="gridTemplateColumns"],
+      .bp-shell div[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+      }
+
+      .bp-shell h1 {
+        font-size: 30px !important;
+        line-height: 0.98 !important;
+        letter-spacing: -0.055em !important;
+      }
+
+      .bp-shell h2 {
+        font-size: 23px !important;
+        line-height: 1.05 !important;
+        letter-spacing: -0.045em !important;
+        text-align: left !important;
+      }
+
+      .bp-shell h3 {
+        font-size: 19px !important;
+        line-height: 1.1 !important;
+      }
+
+      .bp-shell p {
+        font-size: 14px !important;
+        line-height: 1.35 !important;
+      }
+
+      input, select, textarea {
+        min-height: 46px !important;
+        font-size: 16px !important;
+        border-radius: 17px !important;
+      }
+
+      button {
+        min-height: 44px;
+      }
+
+      .bp-login-hero {
+        display: none !important;
+      }
+
+      .bp-form-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .bp-action-row {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 9px !important;
+      }
+
+      .bp-action-row button {
+        padding: 10px 8px !important;
+        font-size: 12px !important;
+        min-height: 46px !important;
+        border-radius: 16px !important;
+      }
+
+      /* evita blocos cortados horizontalmente */
+      .bp-shell [style*="overflow: hidden"] {
+        overflow-x: hidden !important;
+      }
+
+      /* dá espaço final para o menu não cobrir conteúdo */
+      .bp-shell::after {
+        content: "";
+        display: block;
+        height: 96px;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .bp-shell {
+        padding: 10px 10px 110px !important;
+      }
+
+      .bp-brand-card {
+        grid-template-columns: 50px minmax(0, 1fr) 40px !important;
+        padding: 12px !important;
+      }
+
+      .bp-brand-card img,
+      .bp-mobile-logo {
+        width: 50px !important;
+        height: 50px !important;
+        min-width: 50px !important;
+      }
+
+      .bp-brand-card .bp-brand-title {
+        font-size: 23px !important;
+      }
+
+      .bp-nav {
+        left: 9px !important;
+        right: 9px !important;
+        height: 72px !important;
+        padding: 7px !important;
+        border-radius: 24px !important;
+      }
+
+      .bp-nav button {
+        height: 54px !important;
+        min-height: 54px !important;
+        border-radius: 17px !important;
+      }
+
+      .bp-nav button span {
+        font-size: 19px !important;
+      }
+
+      .bp-nav button small {
+        font-size: 9px !important;
+      }
+    }
+
   `;
 
   const sectionTitleStyle: CSSProperties = {
@@ -5277,7 +5553,7 @@ export default App;
 // Agenda Premium patch applied.
 
 
-// Versão Mobile Premium: navegação inferior, inputs mobile-friendly e cards mais confortáveis no telemóvel.
+// Versão Mobile Comercial Final: navegação inferior, inputs mobile-friendly e cards mais confortáveis no telemóvel.
 
 
 // Versão Apple Level: animações premium, loading cinematográfico, foco visual e microinterações.
