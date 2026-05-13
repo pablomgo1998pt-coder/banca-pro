@@ -1281,6 +1281,330 @@ function App() {
       }
     }
 
+
+    /* ===== Banca Pro Mobile Commercial UI v2 Final polish ===== */
+    @media (max-width: 780px) {
+      html, body, #root {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+        background: #05070d !important;
+      }
+
+      body {
+        -webkit-font-smoothing: antialiased !important;
+        text-rendering: geometricPrecision !important;
+      }
+
+      .bp-shell {
+        width: 100% !important;
+        max-width: 100vw !important;
+        margin: 0 !important;
+        padding: 10px 10px calc(112px + env(safe-area-inset-bottom)) !important;
+        overflow-x: hidden !important;
+        box-sizing: border-box !important;
+      }
+
+      .bp-shell * {
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+      }
+
+      .bp-brand-card {
+        position: sticky !important;
+        top: 8px !important;
+        z-index: 950 !important;
+        min-height: 66px !important;
+        padding: 10px 12px !important;
+        border-radius: 24px !important;
+        margin: 0 0 12px !important;
+        display: grid !important;
+        grid-template-columns: 48px minmax(0, 1fr) 40px !important;
+        align-items: center !important;
+        gap: 10px !important;
+        background: linear-gradient(145deg, rgba(15,23,42,0.88), rgba(3,7,18,0.86)) !important;
+        border: 1px solid rgba(148,163,184,0.18) !important;
+        box-shadow: 0 18px 50px rgba(0,0,0,0.42) !important;
+        backdrop-filter: blur(18px) !important;
+        overflow: hidden !important;
+      }
+
+      .bp-brand-card > div[style*="cursor"] {
+        display: contents !important;
+      }
+
+      .bp-brand-card img,
+      .bp-brand-card [style*="BP"],
+      .bp-mobile-logo {
+        width: 48px !important;
+        height: 48px !important;
+        min-width: 48px !important;
+        border-radius: 16px !important;
+        object-fit: cover !important;
+        box-shadow: 0 10px 26px rgba(139,92,246,0.32) !important;
+      }
+
+      .bp-brand-card .bp-brand-title {
+        font-size: 22px !important;
+        line-height: 0.95 !important;
+        letter-spacing: -0.055em !important;
+        white-space: nowrap !important;
+      }
+
+      .bp-brand-card p {
+        margin: 3px 0 0 !important;
+        font-size: 10px !important;
+        line-height: 1.15 !important;
+        color: rgba(203,213,225,0.72) !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+      }
+
+      .bp-brand-card > button {
+        position: static !important;
+        width: 38px !important;
+        height: 38px !important;
+        min-height: 38px !important;
+        padding: 0 !important;
+        border-radius: 14px !important;
+        font-size: 0 !important;
+        display: grid !important;
+        place-items: center !important;
+      }
+
+      .bp-brand-card > button::after {
+        content: "⏻";
+        font-size: 17px;
+      }
+
+      .bp-nav {
+        position: fixed !important;
+        left: 10px !important;
+        right: 10px !important;
+        bottom: calc(8px + env(safe-area-inset-bottom)) !important;
+        z-index: 9999 !important;
+        height: 70px !important;
+        max-height: 70px !important;
+        padding: 7px !important;
+        display: grid !important;
+        grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+        gap: 5px !important;
+        overflow: hidden !important;
+        border-radius: 24px !important;
+        border: 1px solid rgba(148,163,184,0.22) !important;
+        background: linear-gradient(180deg, rgba(15,23,42,0.94), rgba(2,6,23,0.96)) !important;
+        box-shadow: 0 18px 54px rgba(0,0,0,0.60) !important;
+        backdrop-filter: blur(24px) !important;
+      }
+
+      .bp-nav button {
+        min-width: 0 !important;
+        width: 100% !important;
+        height: 56px !important;
+        min-height: 56px !important;
+        padding: 5px 3px !important;
+        border-radius: 18px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 2px !important;
+        font-size: 0 !important;
+        line-height: 1 !important;
+        box-shadow: none !important;
+        overflow: hidden !important;
+      }
+
+      .bp-nav button:nth-child(n+6) {
+        display: none !important;
+      }
+
+      .bp-nav button span {
+        display: block !important;
+        font-size: 20px !important;
+        line-height: 1 !important;
+      }
+
+      .bp-nav button small {
+        display: block !important;
+        font-size: 9px !important;
+        line-height: 1 !important;
+        max-width: 56px !important;
+        overflow: hidden !important;
+        white-space: nowrap !important;
+        text-overflow: ellipsis !important;
+      }
+
+      .bp-shell > div:not(.bp-nav):not(.bp-brand-card),
+      .bp-shell section,
+      .bp-shell article {
+        width: 100% !important;
+        max-width: calc(100vw - 20px) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        border-radius: 22px !important;
+        overflow-x: clip !important;
+      }
+
+      .bp-shell [style*="padding: 34px"],
+      .bp-shell [style*="padding: 32px"],
+      .bp-shell [style*="padding: 30px"],
+      .bp-shell [style*="padding: 28px"],
+      .bp-shell [style*="padding: 26px"],
+      .bp-shell [style*="padding: 24px"] {
+        padding: 15px !important;
+      }
+
+      .bp-shell [style*="gap: 18px"],
+      .bp-shell [style*="gap: 16px"],
+      .bp-shell [style*="gap: 15px"] {
+        gap: 10px !important;
+      }
+
+      .bp-shell div[style*="gridTemplateColumns"],
+      .bp-shell div[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+      }
+
+      .bp-shell h1 {
+        font-size: 26px !important;
+        line-height: 1.02 !important;
+        letter-spacing: -0.045em !important;
+      }
+
+      .bp-shell h2 {
+        font-size: 21px !important;
+        line-height: 1.08 !important;
+        letter-spacing: -0.04em !important;
+        text-align: left !important;
+      }
+
+      .bp-shell h3 {
+        font-size: 18px !important;
+        line-height: 1.12 !important;
+      }
+
+      .bp-shell p {
+        font-size: 13px !important;
+        line-height: 1.33 !important;
+      }
+
+      input, select, textarea {
+        min-height: 44px !important;
+        font-size: 16px !important;
+        border-radius: 16px !important;
+      }
+
+      .bp-login-hero {
+        display: none !important;
+      }
+
+      .bp-form-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .bp-action-row {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 8px !important;
+      }
+
+      .bp-action-row button {
+        padding: 9px 7px !important;
+        font-size: 11px !important;
+        min-height: 44px !important;
+        border-radius: 15px !important;
+      }
+
+      .bp-shell button:not(.bp-nav button):not(.bp-brand-card button) {
+        border-radius: 16px !important;
+      }
+
+      .bp-shell [style*="whiteSpace"],
+      .bp-shell [style*="white-space"] {
+        white-space: normal !important;
+      }
+
+      .bp-shell [style*="overflow: hidden"] {
+        overflow-x: clip !important;
+      }
+
+      .bp-shell svg {
+        max-width: 100% !important;
+      }
+
+      .bp-shell::after {
+        content: "";
+        display: block;
+        height: 110px;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .bp-shell {
+        padding: 8px 8px calc(108px + env(safe-area-inset-bottom)) !important;
+      }
+
+      .bp-shell > div:not(.bp-nav):not(.bp-brand-card),
+      .bp-shell section,
+      .bp-shell article {
+        max-width: calc(100vw - 16px) !important;
+      }
+
+      .bp-brand-card {
+        top: 6px !important;
+        grid-template-columns: 44px minmax(0, 1fr) 36px !important;
+        padding: 9px 10px !important;
+        border-radius: 22px !important;
+      }
+
+      .bp-brand-card img,
+      .bp-brand-card [style*="BP"],
+      .bp-mobile-logo {
+        width: 44px !important;
+        height: 44px !important;
+        min-width: 44px !important;
+      }
+
+      .bp-brand-card .bp-brand-title {
+        font-size: 20px !important;
+      }
+
+      .bp-brand-card > button {
+        width: 36px !important;
+        height: 36px !important;
+        min-height: 36px !important;
+      }
+
+      .bp-nav {
+        left: 8px !important;
+        right: 8px !important;
+        height: 68px !important;
+        max-height: 68px !important;
+        padding: 6px !important;
+        border-radius: 22px !important;
+      }
+
+      .bp-nav button {
+        height: 54px !important;
+        min-height: 54px !important;
+        border-radius: 16px !important;
+      }
+
+      .bp-nav button span {
+        font-size: 18px !important;
+      }
+
+      .bp-nav button small {
+        font-size: 8.5px !important;
+      }
+
+      .bp-shell h1 { font-size: 24px !important; }
+      .bp-shell h2 { font-size: 20px !important; }
+      .bp-shell h3 { font-size: 17px !important; }
+    }
+
   `;
 
   const sectionTitleStyle: CSSProperties = {
@@ -5553,7 +5877,7 @@ export default App;
 // Agenda Premium patch applied.
 
 
-// Versão Mobile Comercial Final: navegação inferior, inputs mobile-friendly e cards mais confortáveis no telemóvel.
+// Versão Mobile Comercial Final Polida: navegação inferior, inputs mobile-friendly e cards mais confortáveis no telemóvel.
 
 
 // Versão Apple Level: animações premium, loading cinematográfico, foco visual e microinterações.
